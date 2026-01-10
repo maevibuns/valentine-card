@@ -26,7 +26,7 @@ body {
 }
 
 /*CLICK FLIP (not hover)*/
-.card:hover .card-front {
+.card:hover .card-inner {
     transform: rotateY(180deg);
 }
 .card:hover .card-back {
@@ -46,16 +46,20 @@ body {
     align-items: center;
 }
 
-/* FRONT */
+/* FRONT*/
 .card-front {
     background-color: #fff;
 }
 
-.card-front p {
-    margin-top: 20px;
-    font-size: 18px;
+.card-front, .card-back p {
+    background-color: #fff;
+    font-family: 'Great Vibes', cursive;
+    font-size: 26px;
+    line-height: 1.4;
+    margin-top: 5px;
     color: #333;
     text-align: center;
+    text-shadow: 0 1px 2px rgba(255, 105, 180, 0.3);
 }
 
 /*CARD BACK*/
@@ -73,13 +77,6 @@ body {
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
-}
-
-.card-back p {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
-    text-align: center;
 }
 
 /* Responsive design */
@@ -121,4 +118,3 @@ body {
         font-size: 20px;
     }
 }
-
