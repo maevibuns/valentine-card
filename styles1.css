@@ -26,7 +26,7 @@ body {
 }
 
 /*CLICK FLIP (not hover)*/
-.card:hover .card-inner {
+.card:hover .card-front {
     transform: rotateY(180deg);
 }
 .card:hover .card-back {
@@ -121,3 +121,4 @@ body {
         font-size: 20px;
     }
 }
+
