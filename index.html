@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Valentine Card</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
     <div class="card-inner">
+
       <!-- FRONT -->
       <div class="card-front">
-        <img src="front.png" alt="Valentine Art">
-        <p>Tap to open this card 💌</p>
+        <img src="front.png" alt="Valentine Art" />
+        <span class="tap-text">tap to reveal 💌</span>
       </div>
 
       <!-- BACK -->
       <div class="card-back">
-        <img src="back.png" alt="Letter">
         <p>
-          Happy Valentine's Day<br>
-          I love you always
+          My love,<br><br>
+          Happy Valentine’s Day 💗<br>
+          I love you always.
         </p>
       </div>
+
     </div>
   </div>
 
-<script>
-  const card = document.querySelector('.card');
-  card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
-  });
-</script>
 </body>
 </html>
