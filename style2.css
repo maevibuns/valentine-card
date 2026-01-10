@@ -54,8 +54,10 @@ body {
 .card-front img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #ffd6e8;
 }
+
 
 /* fade out front on flip */
 .card.flipped .card-front {
