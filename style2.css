@@ -116,22 +116,3 @@ body {
     }
 }
 
-@media screen {
-    .card-front img,
-    .card-back img {
-        width: 100%;
-        height: auto;
-        max-height: 80vh; 
-        object-fit: contain;
-        border-radius: 10px;
-    }
-
-    .card-back p {
-        font-size: 5vw;
-        padding: 0 16px;
-    }
-
-    .card-front p {
-        font-size: 5vw;
-    }
-}
