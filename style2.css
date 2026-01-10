@@ -8,7 +8,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #ffd6e8;
+  /*background: #ffd6e8;*/
+  background: #fff
   margin: 0;
   font-family: sans-serif;
 }
@@ -18,7 +19,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #fff0f6;
+  /*background: #fff0f6;*/
+  background: #fff
 }
 
 /* LETTER OVERLAY */
@@ -47,7 +49,6 @@ body {
   height: 400px;
   perspective: 1200px;
   cursor: pointer;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .card-inner {
@@ -84,7 +85,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #ffd6e8;
+  background: #fff;
 }
 
 
@@ -98,7 +99,7 @@ body {
   background: #fff;
   transform: rotateY(180deg);
   padding: 24px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   opacity: 0;
 }
 
