@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <title>Valentine Card</title>
         <link rel="stylesheet" href="styles1.css">
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400;600&display=swap" rel="stylesheet">
@@ -31,9 +32,27 @@
         
     <script>
         const card = document.querySelector('.card');
-        card.addEventListener('click', () => {
+        card.addEventListener('click', async () => {
+            const isOpening = !card.classList.contains('flipped');
+
+            // Only trigger fullscreen if mobile screen
+            if (isOpening && !document.fullscreenElement && window.innerWidth <= 480) {
+                try {
+                    await document.documentElement.requestFullscreen();
+                } catch (err) {
+                    console.log('Fullscreen not supported');
+                }
+            }
+
             card.classList.toggle('flipped');
+
+            // Optional: exit fullscreen when closing
+            if (!isOpening && document.fullscreenElement && window.innerWidth <= 480) {
+                document.exitFullscreen();
+            }
         });
+
     </script>
+
     </body>
 </html>
