@@ -15,6 +15,7 @@ body {
     cursor: pointer;
 }
 
+/*FLIP CONTAINER*/
 .card-inner {
     position: relative;
     width: 100%;
@@ -24,7 +25,11 @@ body {
     transform-style: preserve-3d;
 }
 
+/*CLICK FLIP (not hover)*/
 .card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card:hover .card-back {
     transform: rotateY(180deg);
 }
 
@@ -34,12 +39,26 @@ body {
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/* FRONT */
 .card-front {
     background-color: #fff;
 }
 
+.card-front p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+/*CARD BACK*/
 .card-back {
     background-color: #fff;
     transform: rotateY(180deg);
@@ -69,6 +88,9 @@ body {
         width: 300px;
         height: 400px;
     }
+    .card-front p {
+        font: 16px;
+    }
     .card-back p {
         font-size: 16px;
     }
@@ -79,6 +101,9 @@ body {
         width: 250px;
         height: 350px;
     }
+    .card-front p {
+        font: 14px;
+    }
     .card-back p {
         font-size: 14px;
     }
@@ -88,6 +113,9 @@ body {
     .card {
         width: 600px;
         height: 700px;
+    }
+    .card-front p {
+        font: 20px;
     }
     .card-back p {
         font-size: 20px;
